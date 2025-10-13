@@ -10,7 +10,7 @@ from dateutil.parser import parse
 init(autoreset=True)
 
 # Paths
-folder_path = r"GENERAL"
+folder_path = r"check and fix headers and format"
 output_folder = os.path.join(folder_path, "check_headers_output")
 FORCE_DATE_ORDER = 'monthfirst'  # Options: 'dayfirst', 'monthfirst', None
 os.makedirs(output_folder, exist_ok=True)

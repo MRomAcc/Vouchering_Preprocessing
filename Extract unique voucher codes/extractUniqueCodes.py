@@ -2,7 +2,7 @@ import pandas as pd
 from pathlib import Path
 
 # Paths
-base_folder = Path("GENERAL\Extract unique voucher codes")
+base_folder = Path("Extract unique voucher codes")
 
 # Find all *.csv files
 output_files = list(base_folder.glob("*.csv"))
