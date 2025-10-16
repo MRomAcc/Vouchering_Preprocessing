@@ -89,8 +89,8 @@ def parse_dates_column(series, col_name):
     """Parse a date column into ISO yyyy-mm-dd, inferring day/month order."""
     if series.isna().all():
         return series
-    parsed_dayfirst = pd.to_datetime(series, errors="coerce", dayfirst=True, infer_datetime_format=True)
-    parsed_monthfirst = pd.to_datetime(series, errors="coerce", dayfirst=False, infer_datetime_format=True)
+    parsed_dayfirst = pd.to_datetime(series, errors="coerce", dayfirst=True)
+    parsed_monthfirst = pd.to_datetime(series, errors="coerce", dayfirst=False)
     dayfirst_valid = parsed_dayfirst.notna().sum()
     monthfirst_valid = parsed_monthfirst.notna().sum()
     if dayfirst_valid > monthfirst_valid:
